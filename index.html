@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Way transportation</title>
+    <meta name="msapplication-tap-highlight" content="no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body data-id="home">
+    <header id="appHeader" class="header">
+        <nav class="nav-bar">
+            <div class="container nav-container nav-container">
+                <div class="logo"></div>
+                <ul class="nav sidemenu" id="top-nav">
+                    <li>
+                        <a class="menu-item" href="#book" rel="m_PageScroll2id">Book now
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="#about" rel="m_PageScroll2id">About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="#cars" rel="m_PageScroll2id">Cars
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="#section-contact-us" rel="m_PageScroll2id">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--MOBILE DROPDOWN-->
+        <button class="hamburger hamburger--collapse" id="toggleMobileMEnu" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+                <ul>
+                    <li>
+                        <a class="menu-item" href="#book" rel="m_PageScroll2id">Book now </a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="#about" rel="m_PageScroll2id">About Us</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="#cars" rel="m_PageScroll2id">Cars</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="#section-contact-us" rel="m_PageScroll2id">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!--MOBILE DROPDOWN-->
+    </header>
+    <section class="banner-section" id="about">
+        <div class="container flexed-container">
+            <div class="text-place-banner animated">
+                <h3 class="animated line1">Welcome to</h3>
+                <h2 class="animated line2">My Way Transportation</h2>
+                <h5 class="animated line3">Enjoy our new booking process</h5>
+                <h3 class="animated line4">The Best in the West</h3>
+            </div>
+        </div>
+        <img src="/images/car.png" class="banner-image animated">
+    </section>
+
+    <!-- ABOUT  US-->
+    <section class="book-section" id="book">
+        <div class="container book-inner">
+            <div class="book-section-left">
+                <form id="book-form" name="book_form" novalidate>
+                    <input type="hidden" name="action" placeholder="action" value="book" />
+                    <div class="input-container">
+                        <label for="from">From</label>
+                        <input type="text" class="def-input" name="from" id="from">
+                    </div>
+                    <div class="input-container">
+                        <label for="to">To</label>
+                        <input type="text" class="def-input" name="to" id="to">
+                    </div>
+                    <div class="input-container">
+                        <label for="name">Your name</label>
+                        <input type="text" class="def-input" id="name" name="name">
+                    </div>
+                    <div class="input-container">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="def-input" id="email" name="email">
+                    </div>
+                    <div class="input-container">
+                        <label for="phone">Your Phone</label>
+                        <input type="text" class="def-input" id="phone" name="phone">
+                    </div>
+                    <div class="input-container pickers">
+                        <div>
+                            <label for="datepicker">Date</label>
+                            <input class="flatpickr flatpickr-input active def-input" name="date" type="text" placeholder="" readonly="readonly"
+                                id="datepicker">
+                        </div>
+                        <div>
+                            <label for="timepicker">Time</label>
+                            <input class="flatpickr flatpickr-input active def-input" name="time" type="text" id="timepicker" placeholder=""
+                                readonly="readonly">
+                        </div>
+                    </div>
+                    <input type="submit" value="book now" class="btn">
+                </form>
+            </div>
+            <div class="book-section-right">
+                <h2>Professional Transportation</h2>
+                <h3>in Greather Los Angeles area</h3>
+                <p>
+                    Our dedication to your peace of mind has made My Way transportation one of the nation's largest privately-held chauffeured
+                    ground transportation companies providing luxury sedans, limousines, vans, SUV's and buses.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--CARS -->
+    <section class="cars-section" id="cars">
+        <div class="container cars-inner">
+            <h2 class="contact-us__title text-center section-title">Cars</h2>
+            <div class="car-tabs">
+                <ul>
+                    <li>
+                        <a href="javascript:void">
+                            <div class="tab-item">
+                                <img src="/images/small-car1.png">
+                                <h5>Sedan</h5>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void">
+                            <div class="tab-item">
+                                <img src="/images/small-car2.png">
+                                <h5>Suv</h5>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void">
+                            <div class="tab-item">
+                                <img src="/images/small-car3.png">
+                                <h5>Van</h5>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="slider-container">
+                <div class="owl-carousel owl-theme car-slider" id="carsSlider">
+                    <div class="owl-item">
+                        <div class="text-container">
+                            <h5 class="car-type">Luxury Sedan</h5>
+                            <h5 class="car-model">BMW 740 LI</h5>
+                            <p class="car-description">
+                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform.
+                                The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than
+                                the STS.
+                            </p>
+                        </div>
+                        <div class="images">
+                            <img class="slider-img car-img-1" src="/images/car2.png">
+                            <img class="slider-img car-img-2" src="/images/car1.png">
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="text-container">
+                            <h5 class="car-type">Luxury Sedan</h5>
+                            <h5 class="car-model">BMW 740 LI</h5>
+                            <p class="car-description">
+                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform.
+                                The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than
+                                the STS.
+                            </p>
+                        </div>
+                        <div class="images">
+                            <img class="slider-img car-img-1" src="/images/cars/2015-mercedes-benz-sprinter-passenger-van-angular-front.png">
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="text-container">
+                            <h5 class="car-type">Luxury Sedan</h5>
+                            <h5 class="car-model">BMW 740 LI</h5>
+                            <p class="car-description">
+                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform.
+                                The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than
+                                the STS.
+                            </p>
+                        </div>
+                        <div class="images">
+                            <img class="slider-img car-img-1" src="/images/cars/newest-chevy-suburban-RntskRNEIJ56htQGA-Amazing-new-chevy-suburban-Filename-Chevrolet-Suburban-Changes-jpeg-charismatic-new-chevy-suburban-2017_engaging-new-chevy-suburban-2017_stylish-new-chevy-sub.png">
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="text-container">
+                            <h5 class="car-type">Luxury Sedan</h5>
+                            <h5 class="car-model">BMW 740 LI</h5>
+                            <p class="car-description">
+                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform.
+                                The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than
+                                the STS.
+                            </p>
+                        </div>
+                        <div class="images">
+                            <img class="slider-img car-img-1" src="/images/cars/2016-gmc-yukon-xl-denali-suv-side-view.png">
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                            <div class="text-container">
+                                <h5 class="car-type">Luxury Sedan</h5>
+                                <h5 class="car-model">BMW 740 LI</h5>
+                                <p class="car-description">
+                                    The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform.
+                                    The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than
+                                    the STS.
+                                </p>
+                            </div>
+                            <div class="images">
+                                <img class="slider-img car-img-1" src="/images/cars/S-CLASS-S550-4MATIC-1.png">
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-elements"></div>
+    </section>
+
+    <!-- CONTACT US  -->
+    <section class="contact-us" id="section-contact-us">
+        <div class="container">
+            <h2 class="contact-us__title text-center section-title">Contact Us</h2>
+            <div class="inner-contact">
+                <div class="form-place">
+                    <div class="form-container">
+                        <form class="contact-form" id="form-contact-us" name="contact_form" id="form" novalidate>
+                            <div class="contact-form-referral ref1">
+                                <input type="hidden" name="action" placeholder="action" value="contact" />
+                                <div class="default-inp-row ">
+                                    <input id="contact_name" class="def-input" type="text" placeholder="Your Name" name="name">
+                                </div>
+                                <div class="elem-spacer"></div>
+                                <div class="default-inp-row ">
+                                    <input id="contact_email" class="def-input" type="email" placeholder="Your Email" name="email">
+                                </div>
+                                <div class="elem-spacer"></div>
+                                <div class="default-inp-row ">
+                                    <input id="contact_phone" class="def-input" type="text" placeholder="Your Phone" name="phone">
+                                </div>
+                                <div class="default-inp-row ">
+                                    <textarea id="contact_message" class="def-input" placeholder="Message" cols="30" rows="10" name="message"></textarea>
+                                </div>
+                                <div class="default-inp-row row-btn">
+                                    <input type="submit" class="btn-submit btn" id="contact-us-btn" value="Send">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    My Way Transportation
+                    <br> 615 E Lomita ave., Glendale
+                    <br> California 91205
+                    <br> Phone: (818) 602 0600
+                    <br> Email: info@mywaytransportation.com
+                    <div class="social-icons">
+                        <a href="javascript:void(0);" target="_blank" class="in-link"></a>
+                        <a href="javascript:void(0);" target="_blank" class="fb-link"></a>
+                        <a href="javascript:void(0);" target="_blank" class="tw-link"></a>
+                        <a href="javascript:void(0);" target="_blank" class="google-link"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <section class="section-footer">
+        <div class="container2">
+            <footer class="footer">
+                <div class="footer-columns">
+                    <div class="footer-boxes">
+                        <div class="copyright-place">
+                            <p>@2018 My Way Transportation
+                                <br class="br1">
+                                <b></b> Website by
+                                <a href="http://platinuminkdesign.com" class="footer-link">
+                                    <span>Platinum Ink Design</span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="footer-right">
+                            <a href="javascript:void" class="footer-link">Licensess & Permits</a>
+                            <b></b>
+                            <a href="javascript:void" class="footer-link">Terms</a>
+                            <b></b>
+                            <a href="javascript:void" class="footer-link">Privacy</a>
+                        </div>
+                    </div>
+            </footer>
+            </div>
+    </section>
+    </div>
+    
+    <script src="js/libs.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/flatpickr.min.js"></script>
+    <script src="js/src/scripts.js"></script> 
+</body>
+
+</html>

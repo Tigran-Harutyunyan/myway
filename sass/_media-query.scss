@@ -1,0 +1,47 @@
+@media only screen and (max-width: 1500px) {
+    .container {
+        width: 100%
+    }
+    .owl-nav {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .sections {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section-title {
+        font-size: 25px
+    }
+    .section-about p {
+        padding: 24px 30px 0;
+    }
+    .logo-medium {
+        background: url(../../assets/img/logo-small.svg) no-repeat;
+        width: 208px;
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .contacts-section .section-p {
+        line-height: 24px
+    }
+    .section-title {
+        font-size: 26px
+    }
+    .section-about p {
+        font-size: 16px;
+        line-height: 36px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .section-title {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,109 @@
+.box-svg {
+    width: 282px;
+    height: 500px;
+    position: relative;
+    display: inline-block;
+    color: #2c3e50;
+    -webkit-transition: background 0.4s 0.5s;
+    transition: background 0.4s 0.5s;
+    margin-bottom: 60px;
+}
+
+.box-svg:hover {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.box-svg span {
+    display: block;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    padding: 5px;
+}
+
+.box-svg h3,
+.box-svg span {
+    -webkit-transition: color 0.4s 0.5s;
+    transition: color 0.4s 0.5s;
+}
+
+.box-svg {
+    h3 {
+        color: white;
+        font-size: 26px;
+        padding-top: 47px;
+        padding-left: 10px;
+    }
+    p {
+        font-size: 14px;
+        color: white;
+        padding: 60px 11px 5px;
+        line-height: 22px;
+    }
+}
+
+.box-svg svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.box-svg svg line {
+    stroke-width: 3;
+    stroke: #fff;
+    fill: none;
+}
+
+ 
+
+.box-svg svg line.right {
+    transform: translateY(-500px);
+}
+
+.box-svg svg line.top {
+    transform: translateX(-400px);
+}
+
+.box-svg svg line {
+    stroke-dasharray: 1000;
+}
+
+.box-svg svg line.left {
+    transform: translateY(-34px);
+}
+
+.box-svg svg line.bottom {
+    transform: translateX(0);
+}
+
+.box-svg svg line.left2 {
+    transform: translateY(500px);
+}
+
+.scrolled-hospice {
+    svg line {
+        transition: all .8s ease-in-out;
+    }
+    svg line.top {
+        transform: translateX(0);
+        transition-delay: 0.4s;
+    }
+    svg line.bottom {
+        transform: translateX(-300px);
+        transition-delay: 1.5s;
+    }
+    svg line.left {
+        transform: translateY(0);
+        transition-duration: 0.5s;
+    }
+    svg line.right {
+        transform: translateY(0);
+        transition-delay: 1.0s;
+    }
+    svg line.left2 {
+        transform: translateY( 112px);
+        transition-delay: 2.25s;
+    }
+}

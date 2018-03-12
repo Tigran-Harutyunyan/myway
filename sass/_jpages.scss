@@ -1,0 +1,209 @@
+.holder {
+    top: 50%;
+    text-align: right;
+    position: absolute;
+    left: 50%;
+    margin-left: -48px;
+    display: flex;
+    width: 106px;
+    margin-top: -36px;
+}
+
+.holder a {
+    font-size: 16px;
+    line-height: 33px;
+    cursor: pointer;
+    margin: 0 7px;
+    color: #464c46;
+    display: none
+}
+
+.jp-next,
+.jp-previous {
+    display: block !important
+}
+
+.holder a:hover {
+    color: #4ab648;
+}
+
+.holder a.jp-previous {
+    @extend .sprite;
+    background-position: 3px -85px;
+    text-indent: -9999px;
+    width: 46px;
+    height: 40px;
+    color: transparent;
+    display: block;
+}
+
+.holder a.jp-next {
+    @extend .sprite;
+    background-position: -51px -85px;
+    text-indent: -9999px;
+    width: 46px;
+    height: 40px;
+}
+
+.holder a.jp-current,
+a.jp-current:hover {
+    color: #4ab648;
+    font-weight: bold;
+}
+
+.holder a.jp-disabled,
+a.jp-disabled:hover {
+    opacity: 0.8
+}
+
+.holder a.jp-current,
+a.jp-current:hover,
+.holder a.jp-disabled,
+a.jp-disabled:hover {
+    cursor: default;
+}
+
+.holder span {
+    margin: 0 5px;
+}
+
+.galleries-section.container {
+    padding-top: 20px;
+}
+
+// GALLERIES SECTION 
+#itemContainer {
+    display: flex;
+    overflow: hidden;
+    li:nth-child(even) {
+        margin-top: 210px;
+        img {
+            margin-top: 58px;
+        }
+        .rectangle1 {
+            top: 115px;
+        }
+        .rectangle2 {
+            top: 158px;
+        }
+    }
+    li:nth-child(odd) {
+        p {
+            padding-left: 56px;
+            padding-right: 0;
+        }
+    }
+    li:nth-child(even) .rectangle2 {
+        top: 158px;
+        height: 548px;
+    }
+    li {
+        width: 550px;
+        margin-right: 280px;
+        position: relative;
+        p {
+            @extend .crimson;
+            font-size: 22px;
+            color: #222222;
+            line-height: 35px;
+            height: 100px;
+            text-align: center;
+            padding: 0 15px;
+        }
+        img {
+            margin-top: 121px;
+            margin-left: 57px;
+            z-index: 2;
+            float: left;
+        }
+        .rectangle1 {
+            border: 3px solid black;
+            width: 550px;
+            height: 740px;
+            position: absolute;
+            left: 0;
+            top: 78px;
+            z-index: 2;
+        }
+        .rectangle2 {
+            position: absolute;
+            border: 3px solid #fff;
+            border-left: none;
+            border-top: none;
+            height: 697px;
+            top: 121px;
+            width: 493px;
+            z-index: 22;
+            left: 57px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1540px) {
+    #itemContainer {
+        justify-content: space-between;
+        padding: 0 50px 170px;
+        li {
+            width: 440px;
+            margin-right: 0;
+            img {
+                width: 440px;
+                margin-left: 47px;
+                margin-top: 112px;
+            }
+            .rectangle1 {
+                width: 440px;
+                height: 591px;
+                top: 78px;
+            }
+            .rectangle2 {
+                height: 557px;
+                top: 112px;
+                width: 393px;
+                left: 47px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .holder {
+        margin-top: 150px
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .holder {
+        margin-top: 150px
+    }
+    #itemContainer {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .gallery-title {
+        position: relative;
+        right: 0;
+        width: auto;
+        top: auto;
+    }
+    #itemContainer li:nth-child(even) {
+        margin-left: auto;
+        margin-top: 252px;
+        margin-right: 20px;
+    }
+    .holder {
+        margin-top: 0;
+        top: 43%;
+        right: 20px;
+        left: 50%;
+        margin-left: -53px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .services-elem {
+        width: 94%;
+        margin: 0 3%;
+        left: 0
+    }
+}
