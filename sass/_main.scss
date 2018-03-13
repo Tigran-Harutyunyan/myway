@@ -376,10 +376,15 @@ section {
         }
     }
     .tab-item {
-        padding-top: 3px
+        padding-top: 3px;
+        cursor:pointer
     }
 }
-
+ 
+    .car-tabs ul .active-filter   a {
+        border: 3px solid #000
+    }
+ 
 .owl-carousel .owl-item img.slider-img {
     width: 480px;
     position: absolute;

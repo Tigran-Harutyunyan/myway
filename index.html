@@ -103,13 +103,11 @@
                     <div class="input-container pickers">
                         <div>
                             <label for="datepicker">Date</label>
-                            <input class="flatpickr flatpickr-input active def-input" name="date" type="text" placeholder="" readonly="readonly"
-                                id="datepicker">
+                            <input class="flatpickr flatpickr-input active def-input" name="date" type="text" placeholder="" readonly="readonly" id="datepicker">
                         </div>
                         <div>
                             <label for="timepicker">Time</label>
-                            <input class="flatpickr flatpickr-input active def-input" name="time" type="text" id="timepicker" placeholder=""
-                                readonly="readonly">
+                            <input class="flatpickr flatpickr-input active def-input" name="time" type="text" id="timepicker" placeholder="" readonly="readonly">
                         </div>
                     </div>
                     <input type="submit" value="book now" class="btn">
@@ -119,8 +117,7 @@
                 <h2>Professional Transportation</h2>
                 <h3>in Greather Los Angeles area</h3>
                 <p>
-                    Our dedication to your peace of mind has made My Way transportation one of the nation's largest privately-held chauffeured
-                    ground transportation companies providing luxury sedans, limousines, vans, SUV's and buses.
+                    Our dedication to your peace of mind has made My Way transportation one of the nation's largest privately-held chauffeured ground transportation companies providing luxury sedans, limousines, vans, SUV's and buses.
                 </p>
             </div>
         </div>
@@ -132,31 +129,15 @@
         <div class="container cars-inner">
             <h2 class="contact-us__title text-center section-title">Cars</h2>
             <div class="car-tabs">
-                <ul>
-                    <li>
-                        <a href="javascript:void">
+                <ul v-cloak>
+                    <li v-for="item in filters" :class="{'active-filter': item.isActive}">
+                        <a  @click=filterByCarCategory(item)>
                             <div class="tab-item">
-                                <img src="/images/small-car1.png">
-                                <h5>Sedan</h5>
+                                <img :src="item.src">
+                                <h5>{{ item.title }}</h5>
                             </div>
                         </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void">
-                            <div class="tab-item">
-                                <img src="/images/small-car2.png">
-                                <h5>Suv</h5>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void">
-                            <div class="tab-item">
-                                <img src="/images/small-car3.png">
-                                <h5>Van</h5>
-                            </div>
-                        </a>
-                    </li>
+                    </li> 
                 </ul>
             </div>
             <div class="slider-container">
@@ -166,9 +147,7 @@
                             <h5 class="car-type">Luxury Sedan</h5>
                             <h5 class="car-model">BMW 740 LI</h5>
                             <p class="car-description">
-                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform.
-                                The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than
-                                the STS.
+                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
                             </p>
                         </div>
                         <div class="images">
@@ -181,9 +160,7 @@
                             <h5 class="car-type">Luxury Sedan</h5>
                             <h5 class="car-model">BMW 740 LI</h5>
                             <p class="car-description">
-                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform.
-                                The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than
-                                the STS.
+                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
                             </p>
                         </div>
                         <div class="images">
@@ -195,9 +172,7 @@
                             <h5 class="car-type">Luxury Sedan</h5>
                             <h5 class="car-model">BMW 740 LI</h5>
                             <p class="car-description">
-                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform.
-                                The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than
-                                the STS.
+                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
                             </p>
                         </div>
                         <div class="images">
@@ -209,9 +184,7 @@
                             <h5 class="car-type">Luxury Sedan</h5>
                             <h5 class="car-model">BMW 740 LI</h5>
                             <p class="car-description">
-                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform.
-                                The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than
-                                the STS.
+                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
                             </p>
                         </div>
                         <div class="images">
@@ -219,19 +192,17 @@
                         </div>
                     </div>
                     <div class="owl-item">
-                            <div class="text-container">
-                                <h5 class="car-type">Luxury Sedan</h5>
-                                <h5 class="car-model">BMW 740 LI</h5>
-                                <p class="car-description">
-                                    The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform.
-                                    The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than
-                                    the STS.
-                                </p>
-                            </div>
-                            <div class="images">
-                                <img class="slider-img car-img-1" src="/images/cars/S-CLASS-S550-4MATIC-1.png">
-                            </div>
+                        <div class="text-container">
+                            <h5 class="car-type">Luxury Sedan</h5>
+                            <h5 class="car-model">BMW 740 LI</h5>
+                            <p class="car-description">
+                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
+                            </p>
                         </div>
+                        <div class="images">
+                            <img class="slider-img car-img-1" src="/images/cars/S-CLASS-S550-4MATIC-1.png">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -313,11 +284,39 @@
             </div>
     </section>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var app = new Vue({
+            el: '#cars',
+            data: {
+                filters: [{
+                    src: "/images/small-car1.png",
+                    title: 'Sedan',
+                    isActive: false
+                },{
+                    src: "/images/small-car2.png",
+                    title: 'Suv',
+                    isActive: false
+                },{
+                    src: "/images/small-car3.png",
+                    title: 'Van',
+                    isActive: false
+                }]
+            },
+            methods:{
+                filterByCarCategory(item){
+                    this.filters.forEach(element => {
+                       element.isActive =  element.title == item.title ? true: false
+                    });
+                }
+            }
+        })
+    </script>
     <script src="js/libs.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/flatpickr.min.js"></script>
-    <script src="js/src/scripts.js"></script> 
+    <script src="js/src/scripts.js"></script>
+    
 </body>
 
 </html>
