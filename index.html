@@ -142,65 +142,17 @@
             </div>
             <div class="slider-container">
                 <div class="owl-carousel owl-theme car-slider" id="carsSlider">
-                    <div class="owl-item">
+                    <div class="owl-item" v-for="item in models">
                         <div class="text-container">
-                            <h5 class="car-type">Luxury Sedan</h5>
-                            <h5 class="car-model">BMW 740 LI</h5>
+                            <h5 class="car-type">{{ item.category }}</h5>
+                            <h5 class="car-model">{{ item.model }}</h5>
                             <p class="car-description">
-                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
-                            </p>
+                                    The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
+                             </p>
                         </div>
                         <div class="images">
-                            <img class="slider-img car-img-1" src="/images/car2.png">
-                            <img class="slider-img car-img-2" src="/images/car1.png">
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="text-container">
-                            <h5 class="car-type">Luxury Sedan</h5>
-                            <h5 class="car-model">BMW 740 LI</h5>
-                            <p class="car-description">
-                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
-                            </p>
-                        </div>
-                        <div class="images">
-                            <img class="slider-img car-img-1" src="/images/cars/2015-mercedes-benz-sprinter-passenger-van-angular-front.png">
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="text-container">
-                            <h5 class="car-type">Luxury Sedan</h5>
-                            <h5 class="car-model">BMW 740 LI</h5>
-                            <p class="car-description">
-                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
-                            </p>
-                        </div>
-                        <div class="images">
-                            <img class="slider-img car-img-1" src="/images/cars/newest-chevy-suburban-RntskRNEIJ56htQGA-Amazing-new-chevy-suburban-Filename-Chevrolet-Suburban-Changes-jpeg-charismatic-new-chevy-suburban-2017_engaging-new-chevy-suburban-2017_stylish-new-chevy-sub.png">
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="text-container">
-                            <h5 class="car-type">Luxury Sedan</h5>
-                            <h5 class="car-model">BMW 740 LI</h5>
-                            <p class="car-description">
-                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
-                            </p>
-                        </div>
-                        <div class="images">
-                            <img class="slider-img car-img-1" src="/images/cars/2016-gmc-yukon-xl-denali-suv-side-view.png">
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="text-container">
-                            <h5 class="car-type">Luxury Sedan</h5>
-                            <h5 class="car-model">BMW 740 LI</h5>
-                            <p class="car-description">
-                                The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
-                            </p>
-                        </div>
-                        <div class="images">
-                            <img class="slider-img car-img-1" src="/images/cars/S-CLASS-S550-4MATIC-1.png">
+                            <img class="slider-img car-img-1" :src="item.img1">
+                            <img class="slider-img car-img-2" :src="item.img2">
                         </div>
                     </div>
                 </div>
@@ -301,7 +253,27 @@
                     src: "/images/small-car3.png",
                     title: 'Van',
                     isActive: false
-                }]
+                }],
+                models: [
+                    {
+                        category: "sedan",
+                        model: "BMW 740 LI",
+                        img1: "/images/car1.png",
+                        img2: "/images/car2.png"
+                    },
+                    {
+                        category: "van",
+                        model: "mercedes benz sprinter",
+                        img1: "/images/cars/sprinter-side.png",
+                        img2: "/images/cars/sprinter-front.png"
+                    },
+                    {
+                        category: "suv",
+                        model: "BMW 740 LI",
+                        img1: "/images/cars/2016-gmc.png",
+                        img2: "/images/cars/2016-gmc2.png"
+                    }
+                ]
             },
             methods:{
                 filterByCarCategory(item){
