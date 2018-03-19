@@ -1,14 +1,12 @@
 $(document).ready(function() {
     var disabled = false;
 
-    $("#carsSlider").owlCarousel({
+   /*  $("#carsSlider").owlCarousel({
         autoplay: true,
         autoplayTimeout: 4000,
         autoplayHoverPause: false,
         loop: true,
-        smartSpeed: 1000,
-       /*  animateOut: 'fadeOut',
-        animateIn: 'fadeIn', */
+        smartSpeed: 1000, 
         margin: 0,
         navContainer: $('.nav-elements'),
         nav: true,
@@ -21,7 +19,7 @@ $(document).ready(function() {
                 $('#carsSlider').show();
             }, 200);
         }
-    });
+    }); */
     // =============== SCROLL TO PLUGIN ==================
     $("a[rel='m_PageScroll2id']").mPageScroll2id({
         offset: 100,

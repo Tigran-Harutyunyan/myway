@@ -117,7 +117,8 @@
                 <h2>Professional Transportation</h2>
                 <h3>in Greather Los Angeles area</h3>
                 <p>
-                    Our dedication to your peace of mind has made My Way transportation one of the nation's largest privately-held chauffeured ground transportation companies providing luxury sedans, limousines, vans, SUV's and buses.
+                    Our dedication to your peace of mind has made My Way transportation one of the nation's largest privately-held chauffeured
+                    ground transportation companies providing luxury sedans, limousines, vans, SUV's and buses.
                 </p>
             </div>
         </div>
@@ -131,24 +132,25 @@
             <div class="car-tabs">
                 <ul v-cloak>
                     <li v-for="item in filters" :class="{'active-filter': item.isActive}">
-                        <a  @click=filterByCarCategory(item)>
+                        <a @click=filterByCarCategory(item)>
                             <div class="tab-item">
                                 <img :src="item.src">
                                 <h5>{{ item.title }}</h5>
                             </div>
                         </a>
-                    </li> 
+                    </li>
                 </ul>
             </div>
             <div class="slider-container">
                 <div class="owl-carousel owl-theme car-slider" id="carsSlider">
-                    <div class="owl-item" v-for="item in models">
+                    <div class="owl-item" v-for="item in cars">
                         <div class="text-container">
                             <h5 class="car-type">{{ item.category }}</h5>
                             <h5 class="car-model">{{ item.model }}</h5>
                             <p class="car-description">
-                                    The Cadillac XTS is a full-size luxury sedan from Cadillac. It is based on an enlarged version of the Epsilon II platform. The XTS replaces both the Cadillac STS and DTS, and is smaller than the DTS but larger than the STS.
-                             </p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quis vitae repellat repudiandae non optio eligendi minus,
+                                iusto cupiditate. Sequi facere modi aut veniam facilis eum amet, quae rerum dolore!
+                            </p>
                         </div>
                         <div class="images">
                             <img class="slider-img car-img-1" :src="item.img1">
@@ -241,54 +243,95 @@
         var app = new Vue({
             el: '#cars',
             data: {
+                cars: [],
                 filters: [{
                     src: "/images/small-car1.png",
                     title: 'Sedan',
                     isActive: false
-                },{
+                }, {
                     src: "/images/small-car2.png",
                     title: 'Suv',
                     isActive: false
-                },{
+                }, {
                     src: "/images/small-car3.png",
                     title: 'Van',
                     isActive: false
                 }],
-                models: [
-                    {
-                        category: "sedan",
+                models: [{
+                        category: "Sedan",
                         model: "BMW 740 LI",
-                        img1: "/images/car1.png",
-                        img2: "/images/car2.png"
+                        img1: "/images/cars/bmw-side.png",
+                        img2: "/images/cars/bmw-front.png"
                     },
                     {
-                        category: "van",
-                        model: "mercedes benz sprinter",
+                        category: "Van",
+                        model: "Mercedes benz sprinter",
                         img1: "/images/cars/sprinter-side.png",
                         img2: "/images/cars/sprinter-front.png"
                     },
                     {
-                        category: "suv",
-                        model: "BMW 740 LI",
-                        img1: "/images/cars/2016-gmc.png",
-                        img2: "/images/cars/2016-gmc2.png"
+                        category: "Suv",
+                        model: "Gmc",
+                        img1: "/images/cars/gmc-front.png",
+                        img2: "/images/cars/gmc-side.png"
+                    },
+                    {
+                        category: "Sedan",
+                        model: "Mersedes",
+                        img1: "/images/cars/mersedes-front.png",
+                        img2: "/images/cars/mersedes-side.png"
                     }
                 ]
             },
-            methods:{
-                filterByCarCategory(item){
+            methods: {
+                filterByCarCategory(item) {
                     this.filters.forEach(element => {
-                       element.isActive =  element.title == item.title ? true: false
+                        element.isActive = element.title == item.title ? true : false
+                    });
+
+                    $("#carsSlider").owlCarousel('destroy');
+                    this.cars = this.models.filter(element => {
+                        return element.category == item.title
+                    });
+                    setTimeout(() => {
+                        this.initSlider();
+                    },300);
+                },
+                initSlider() {
+                    $("#carsSlider").owlCarousel({
+                        autoplay: true,
+                        autoplayTimeout: 4000,
+                        autoplayHoverPause: false,
+                        loop: true,
+                        smartSpeed: 1000,
+                        margin: 0,
+                        navContainer: $('.nav-elements'),
+                        nav: true,
+                        dots: false,
+                        items: 1,
+                        autoHeight: true,
+                        mouseDrag: false,
+                        onInitialized: (event) => {
+                            setTimeout(() => {
+                                $('#carsSlider').show();
+                            }, 200);
+                        }
                     });
                 }
-            }
+            },
+            mounted() {
+                this.cars = JSON.parse(JSON.stringify(this.models))
+                setTimeout(() => {
+                    this.initSlider();
+                })
+            },
         })
     </script>
     <script src="js/libs.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/flatpickr.min.js"></script>
     <script src="js/src/scripts.js"></script>
-    
+
 </body>
 
 </html>
